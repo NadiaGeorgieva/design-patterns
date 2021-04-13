@@ -1,0 +1,22 @@
+package observer;
+
+public class ObserverMain {
+
+	public static void main(String[] args) {
+		 
+        Observer obs1=new PageFollower("Reader01");
+        Observer obs2=new PageFollower("Reader02");
+        Observer obs3=new PageFollower("Reader03");
+        
+        FacebookPage page=new FacebookPage();
+        
+        page.follow(obs1);
+        page.follow(obs2);
+        page.follow(obs3);
+        
+        page.setNewPost("Breaking news:Bulgarian elections 2021");
+        page.setNewPost("Breaking news:Covid 19");
+
+	}
+
+}

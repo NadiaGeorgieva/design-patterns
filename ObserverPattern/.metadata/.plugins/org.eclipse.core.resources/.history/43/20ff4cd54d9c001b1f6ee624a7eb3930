@@ -1,0 +1,38 @@
+package observer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FacebookPage implements Observable {
+
+	private List<Observer>observers;
+	
+	public FacebookPage() {
+		this.observers=new ArrayList<>();
+	}
+	
+	@Override
+	public void follow(Observer observer) {
+		this.observers.add(observer);
+		observer.setPage(this);
+	}
+
+	@Override
+	public void unfollow(Observer observer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getUpdate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
