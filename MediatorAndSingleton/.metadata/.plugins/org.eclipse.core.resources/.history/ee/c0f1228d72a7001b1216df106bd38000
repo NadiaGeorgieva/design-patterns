@@ -1,0 +1,51 @@
+package mediator_singleton;
+
+import java.util.ArrayList;
+
+public class ChatRoom implements MessageMediator {
+
+	private String chatName;
+	private ArrayList<User> users;
+	
+	public ChatRoom(String name) {
+		this.chatName = name;
+		users = new ArrayList<User>();
+	}
+	
+	@Override
+	public void add(User user) {
+		users.add(user);
+	}
+
+	@Override
+	public void remove(User user) {
+		users.remove(user);
+		
+	}
+
+	@Override
+	public void sendMessage(User user, String msg) {
+		for(int i = 0 ; i< users.size() ; i++)
+		{
+			if(users.get(i) != user)
+			{
+				users.get(i).receive(msg);
+				
+			}
+			else if(msg=="add_bot") {
+				ChatBot bot=new ChatBot();
+				bot.Spy(user, msg);
+			}
+		}
+	}
+
+	@Override
+	public String getChatName() {
+		
+		return chatName;
+	}
+
+	
+
+	
+}

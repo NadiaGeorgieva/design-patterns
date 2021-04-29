@@ -1,0 +1,19 @@
+package mediator_singleton;
+
+public class ChatRoomMain {
+
+	public static void main(String[] args) {
+		ChatUser user1 = new ChatUser("Nadia");
+		ChatUser user2 = new ChatUser("Gery");
+		ChatUser user3 = new ChatUser("Boriana");
+		
+		ChatRoom group_chat = new ChatRoom("Facebook group chat");
+		
+		user1.joinChat(group_chat);
+		user2.joinChat(group_chat);
+		user3.joinChat(group_chat);
+
+		user1.send("hi");
+	}
+
+}

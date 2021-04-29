@@ -1,0 +1,16 @@
+package mediator_singleton;
+
+public abstract class User {
+	protected String username;
+	protected MessageMediator mediator;
+	
+	public User(String username) {
+		this.username = username;
+	}
+	
+	public abstract void send(String msg);
+	public abstract void receive(String msg);
+	public abstract void joinChat(MessageMediator mediator);
+	public abstract void leaveChat(MessageMediator mediator);
+	public abstract String getUsername();
+}

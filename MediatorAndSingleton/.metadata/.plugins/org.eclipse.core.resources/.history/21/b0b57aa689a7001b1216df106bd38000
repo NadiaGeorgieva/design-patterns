@@ -1,0 +1,26 @@
+package mediator_singleton;
+
+public class ChatBot {
+	
+	private static ChatBot instance=null;	
+
+	public static ChatBot getInstance() {
+		if(instance==null) {
+			instance= new ChatBot();
+		}
+		return instance;
+	}
+	
+
+	public void Spy(User user,String msg,ChatRoom chat) {
+		
+			if( msg.contains("cat")  )
+			{
+				System.out.println(user.getUsername()+" has been removed!");
+				chat.remove(user);
+				System.out.println("The word: cat is banned!!");
+			}
+		}
+		
+	}
+	

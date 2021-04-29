@@ -1,0 +1,9 @@
+package mediator_singleton;
+
+
+public abstract class ChatRoom implements MessageMediator {
+
+	
+	
+	
+}

@@ -1,0 +1,35 @@
+package mediator_singleton;
+
+public class ChatUser extends User {
+
+	public ChatUser(String username) {
+		super(username);
+	}
+
+	@Override
+	public void send(String msg) {
+	
+	}
+
+	@Override
+	public void receive(String msg) {
+	
+	}
+
+	@Override
+	public void joinChat(MessageMediator mediator) {
+		
+	}
+
+	@Override
+	public void leaveChat(MessageMediator mediator) {
+	
+	}
+
+	@Override
+	public String getUsername() {	
+		return null;
+	}
+	
+	
+}

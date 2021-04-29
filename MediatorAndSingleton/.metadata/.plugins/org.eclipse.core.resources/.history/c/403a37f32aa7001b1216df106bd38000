@@ -1,0 +1,10 @@
+package mediator_singleton;
+
+public interface MessageMediator {
+	void join(User user);
+	void anounce(User user);
+	void leave(User user);
+	
+	void sendMessage(User user , String text);
+	String getChatName();
+}

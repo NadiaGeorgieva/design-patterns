@@ -1,0 +1,14 @@
+package mediator_singleton;
+
+public class ChatBot {
+
+	private static ChatBot instance;
+	
+	public static ChatBot getInstance() {
+		if(instance==null) {
+			instance= new ChatBot();
+		}
+		return instance;
+	}
+	
+}

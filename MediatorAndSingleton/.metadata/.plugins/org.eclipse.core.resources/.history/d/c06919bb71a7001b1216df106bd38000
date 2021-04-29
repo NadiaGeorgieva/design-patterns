@@ -1,0 +1,33 @@
+package mediator_singleton;
+
+import java.util.List;
+
+public class ChatBot {
+
+
+	private static ChatBot instance=null;	
+
+	public static ChatBot getInstance() {
+		if(instance==null) {
+			instance= new ChatBot();
+		}
+		return instance;
+	}
+	
+	@SuppressWarnings("unlikely-arg-type")
+	public void Spy(List<FacebookUser> usr,String msg) {
+		for(int i = 0 ; i< usr.size() ; i++)
+		{
+			if(msg.contains("cat")) {
+			System.out.println(usr+" has been removed!");
+				usr.remove(usr);
+			System.out.println("The word: cat is banned!!");
+			
+		    }
+			
+		}
+		
+		
+	}
+	
+}

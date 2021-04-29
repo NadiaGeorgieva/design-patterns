@@ -1,0 +1,6 @@
+package mediator_singleton;
+
+public class ChatUser extends User {
+
+	
+}

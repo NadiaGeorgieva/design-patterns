@@ -1,0 +1,12 @@
+package mediator_singleton;
+
+import java.util.ArrayList;
+
+public abstract class ChatRoom implements MessageMediator {
+
+	private String chatName;
+	private ArrayList<User> users;
+	private ChatBot bot;
+	
+	
+}
